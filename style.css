@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Poppins', sans-serif;
+    --bg-color: hsl(0, 100%, 74%);
+    --bg-color-light: hsla(0, 100%, 74%, 0.95);
+    --submit-btn: hsl(154, 59%, 51%);
+    --submit-btn-shadow: hsla(154, 61%, 36%, 0.8);
+    --pricing-bg: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%) ;
+    --main-font: hsl(246, 25%, 77%);
+}
+
+body{
+   background-image: url("./images/bg-intro-mobile.png");
+   background-color: var(--bg-color-light);
+   background-position: center;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.container{
+    padding: 2em 1.5em;
+    max-width: 1440px; 
+    margin: 0 auto;  
+}
+
+.content-wraper{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.header{
+    text-align: center;
+    color: white;
+    margin-bottom: 2em;
+}
+
+.header h1{
+    font-size: 1.8rem;
+    margin-bottom: 0.75em;
+   line-height: 1.3;
+}
+
+
+.pricing{
+    background-color: var(--pricing-bg);
+    text-align: center;
+    color: var(--main-font);
+    font-weight: 300;
+    color: white;
+    padding: 1.0em 2.75em;
+    border-radius: 10px;
+    margin: 1.5em 0;
+    box-shadow: 0 8px 0px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.pricing span{
+    font-weight: 600;
+    color: white;
+}
+
+.register{
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.entry{
+    border: 1px solid var(--main-font);
+    padding: 0.75em;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.entry input{
+    width: 100%;
+    display: block;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--bg-color);
+    outline: none;
+    border: none;
+}
+
+.entry input:focus,
+.entry input:active{
+    outline: none;
+}
+
+.entry input::placeholder{
+    color: rgb(112, 112, 112);
+    font-weight: 600;
+}
+
+.entry .error-icon{
+    margin-left: 0.5em;
+    max-width: 25px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.error-icon img{
+    width: 100%;
+    display: block;
+}
+
+.error-message{
+    color: var(--bg-color);
+    font-size: 0.7rem;
+    text-align: right;
+    font-style: italic;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.error-message + .entry{
+    margin-top: 1em;
+}
+
+.register button{
+    width: 100%;
+    font-size: 1rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: white;
+    padding:  0.75em 0;
+    border: none;
+    background-color: var(--submit-btn);
+    border-radius: 6px;
+    margin: 1em 0;
+    box-shadow: 0 3.5px 0 0px var(--submit-btn-shadow);
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.register button:hover{
+    opacity: 0.75;
+}
+
+.terms{
+    color: var(--main-font);
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.terms span{
+    color: var(--bg-color);
+    cursor: pointer;
+    font-weight: 400;
+}
+
+@media(min-width: 750px){
+    .content-wraper{
+        display: flex;
+        max-width: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header{
+        flex: 1 1 50%;
+        text-align: left;
+        max-width: 550px;
+        margin-right: 1em;
+    }
+}
